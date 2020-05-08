@@ -1,0 +1,13 @@
+<div role= "tabpanel" id = "hourlydata" class = "tab-pane">
+  <div class="dropdown">
+    <select class="form-control" id="sel2" ng-controller="myAppController" style="width:400px;" ng-click="getKey()">
+      <option selected="selected"><a routerLink="src/app/bar-chart">Temperature</a></option>
+      <option><a routerLink="./bar-chart">Pressure</a></option>
+      <option><a routerLink="./bar-chart">Ozone</a></option>
+      <option><a routerLink="./bar-chart">Ozone</a></option>
+      <option><a routerLink="./bar-chart">Visibility</a></option>
+      <option><a routerLink="./bar-chart">WindSpeed</a></option>
+    </select>
+    <div>
+      <router-outlet></router-outlet>
+</div>
