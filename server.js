@@ -40,7 +40,7 @@ app.get('/WeatherData',function(req,res){
       console.log("came here and state ="+state);
     //  var searchId = req.query.search_id;
     //  var key = req.api_key;
-      var url = "https://www.googleapis.com/customsearch/v1?q="+state+"%20State%20Seal&cx=009738033209928298540:fg6619stlg0&imgSize=huge&imgType=news&num=1&searchType=image&key=AIzaSyAt5hDCocOEcxDwWe3fZYsm1ovC556oU34";
+      var url = "https://www.googleapis.com/customsearch/v1?q="+state+"%20State%20Seal&cx=009738033209928298540:fg6619stlg0&imgSize=huge&imgType=news&num=1&searchType=image&key=";
       //var url = "https://api.darksky.net/forecast/ddfa098bf87455a227e584111ddc172d/"+lat+","+long;
       axios.get(url).then(function(response){
          // console.log("response")
@@ -63,7 +63,7 @@ app.get('/WeatherData',function(req,res){
       //  var searchId = req.query.search_id;
       //  var key = req.api_key;
       var url = "https://api.darksky.net/forecast/ddfa098bf87455a227e584111ddc172d/"+lat+","+long+","+time;
-        //var url = "https://www.googleapis.com/customsearch/v1?q="+state+"%20State%20Seal&cx=009738033209928298540:fg6619stlg0&imgSize=huge&imgType=news&num=1&searchType=image&key=AIzaSyAt5hDCocOEcxDwWe3fZYsm1ovC556oU34";
+        //var url = "https://www.googleapis.com/customsearch/v1?q="+state+"%20State%20Seal&cx=009738033209928298540:fg6619stlg0&imgSize=huge&imgType=news&num=1&searchType=image&key=";
         //var url = "https://api.darksky.net/forecast/ddfa098bf87455a227e584111ddc172d/"+lat+","+long;
         axios.get(url).then(function(response){
            // console.log("response")
@@ -81,7 +81,7 @@ app.get('/WeatherData',function(req,res){
 app.get('/Autocomplete',function(req,res){
     //console.log("came here");
     var keyword = req.query.keyword;
-    var url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input="+keyword+"&types=(cities)&language=en&key=AIzaSyBy2MEexehHdEUnjPn5ViNLvv5YwKzFyBI";
+    var url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input="+keyword+"&types=(cities)&language=en&key=";
     axios.get(url).then(function(response){
        // console.log("response")
     var result=response.data;
